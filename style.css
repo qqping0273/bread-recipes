@@ -5,10 +5,10 @@
 
 /* --- 顏色變數 --- */
 :root {
-    --color-primary: #8B4513; /* 麵包/大地色 */
-    --color-secondary: #D2B48C; /* 柔和背景色 */
-    --color-text: #333333;
-    --color-background: #F8F8F8;
+    --color-primary: #4A6572; /* 沉穩藍灰 */
+    --color-secondary: #C1D0D5; /* 淺灰藍 */
+    --color-text: #2C3E50;
+    --color-background: #F0F4F7;
     --color-light: #FFFFFF;
 }
 
