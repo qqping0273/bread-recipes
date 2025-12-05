@@ -36,23 +36,25 @@ h1, h2, h3 {
 
 /* --- 頁首 (Header) 樣式：深色底淺色字 --- */
 header {
-    background-color: var(--color-primary); /* 設定為深色背景 */
+    background-color: var(--color-primary); 
     padding: 30px 0;
-    border-bottom: 2px solid var(--color-secondary); /* 可選，保留底部淺色線條 */
+    border-bottom: 2px solid var(--color-secondary);
     text-align: center;
-    color: var(--color-light); /* 將整個 Header 區塊的預設文字顏色設為淺色 */
+    color: var(--color-light); 
 }
 
+/* 確保 h1 標題也是淺色 */
 header h1 {
     margin-bottom: 5px;
     font-size: 2.5em;
-    color: var(--color-light); /* 確保主標題也是淺色 */
+    color: var(--color-light); 
 }
 
+/* 確保副標題 (p) 也是淺色，並用 !important 覆蓋內聯樣式 */
 header p {
     font-size: 1.1em;
     margin-top: 5px;
-    color: var(--color-light); /* 確保副標題也是淺色 */
+    color: var(--color-light) !important; /* 強制使用淺色，避免被 HTML 內聯樣式覆蓋 */
     opacity: 0.9;
 }
 
