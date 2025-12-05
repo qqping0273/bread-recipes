@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>6. Feige Walnuss (無花果核桃麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>6. Feige Walnuss (無花果核桃麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-6.jpg" alt="無花果核桃麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款口感豐富、酸甜平衡的麵包，使用小麥酸種和波蘭種兩種酵頭，並加入大量的無花果乾和烘烤過的核桃。麵團採用 Ruchmehl（半全麥/鄉村麵粉）製作，帶來傳統的風味和緊實的結構，適合搭配乳酪或單獨享用。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 30 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭及主麵團總計超過 18 小時 (包含隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 35-40 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 250°C 降至 190°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,60 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>小麥酸種 (Weizensauerteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1200 克 小麥麵粉 550 型</li>
+                        <li>100 克 活性酸種酵種 (Anstellgut)</li>
+                        <li>700 克 烤核桃</li>
+                        <li>2000 毫升 溫水 (約 28-30°C)</li>
+                    </ul>
+
+                    <h4>波蘭種 (Poolish)</h4>
+                    <ul>
+                        <li>1000 克 小麥麵粉 1050 型</li>
+                        <li>10 克 酵母</li>
+                        <li>1000 克 無花果乾</li>
+                        <li>1200 毫升 水</li>
                     </ul>
                     
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>7800 克 鄉村麵粉 (Ruchmehl)</li>
+                        <li>20 克 酵母</li>
+                        <li>1000 克 烤核桃</li>
+                        <li>240 克 鹽</li>
+                        <li>4500 毫升 水 (第一次加入)</li>
+                        <li>1000 毫升 水 (延遲加入，調整用)</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Weizensauerteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1200 g Weizenmehl 550</li>
+                        <li>100 g Anstellgut, aktiv</li>
+                        <li>700 g Walnüsse geröstet</li>
+                        <li>2000 g Wasser, warm ca. 28-30°C</li>
+                    </ul>
+
+                    <h4>Poolish</h4>
+                    <ul>
+                        <li>1000 g Weizenmehl 1050</li>
+                        <li>10 g Hefe</li>
+                        <li>1000 g Feigen getrocknet</li>
+                        <li>1200 g Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>7800 g Ruchmehl</li>
+                        <li>20 g Hefe</li>
+                        <li>1000 g geröstete Walnüsse</li>
+                        <li>240 g Salz</li>
+                        <li>4500 ml Wasser</li>
+                        <li>1000 ml Wasser, verzögert zugeben</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +236,25 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>酸種製作：將所有酸種材料放入碗中，與 28-30°C 溫水充分混合（最好使用打蛋器）。將酸種蓋上蓋子，在溫暖處發酵至少 12-16 小時。</li>
+                        <li>波蘭種製作：將水和酵母在碗中攪拌均勻。然後拌入小麥麵粉和無花果乾。將預拌麵團在室溫下靜置，直到體積增加一倍。蓋上蓋子，放入冰箱冷藏過夜。</li>
+                        <li>主麵團攪拌：將除了核桃以外的所有主麵團材料和 4500 毫升水放入攪拌機。慢速攪拌 4 分鐘，再快速揉麵 4 分鐘。然後加入第二批水（1000 毫升），再慢速攪拌 2 分鐘，快速揉麵 4-5 分鐘。</li>
+                        <li>果乾混入與靜置：麵團揉好後，緩慢地將核桃拌入。理想的麵團溫度為 25°C。將完成的麵團靜置至少 1 小時。</li>
+                        <li>冷藏：之後進行一次伸展和折疊 (dehnen und falten)，然後放入冰箱冷藏。</li>
+                        <li>回溫與整形：隔天，將麵團從冰箱取出，在室溫下靜置約 60 分鐘。之後小心地倒在撒有麵粉的桌面上，在表面撒上少許麵粉後稱重分塊。重點是要非常輕柔地處理麵團。將麵團塊輕輕滾圓，放入發酵籃中，在室溫下發酵約 45-60 分鐘。</li>
+                        <li>烘烤：將麵包收口朝上推入預熱至 250°C 的烤箱中，並充分加蒸汽。約 10 分鐘後，將烤箱溫度降至 190°C。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Für den Sauerteig alle Zutaten in eine Schüssel geben und gut vermischen. (am besten mit einem Schneebesen) Das Wasser sollte ca. 28-30°C warm sein. Den Sauerteig abdecken und an einem warmen Ort mindestens 12-16 Std. reifen lassen.</li>
+                        <li>Für den Poolish, Wasser und Hefe in einer Schüssel verrühren. Das Weizenmehl und die Feigen unterrühren. Den Vorteig bei Zimmertemperatur stehen lassen, bis der Teig sich verdoppelt hat. Abdecken, im Kühlschrank über Nacht ruhen lassen.</li>
+                        <li>Für den Hauptteig alle Zutaten bis auf die Walnüsse in die Maschine geben. 4 min. auf langsamer Stufe mischen und 4 min. auf schneller Stufe kneten, dann das zweite Wasser dazu geben und nochmal 2 min im langsamen gang und 4-5 min. im Schnellgang kneten. Dann die Walnüsse langsam unterlaufen lassen. Ideale Teigtemperatur wäre 25°C. Den fertigen Teig mindesten 1 Std. ruhen lassen.</li>
+                        <li>Danach einmal dehnen und falten und in den Kühlschrank stellen.</li>
+                        <li>Den Teig am nächsten Tag aus der Kühlung holen und bei Raumtemperatur ca. 60 min stehen lassen. Danach vorsichtig auf einen bemehlten Tisch stürzen.Die Oberfläche mit etwas Mehl bestreuen und abwiegen. Am wichtigsten ist, dass man darauf achtet alles sehr Teig schonend zu machen. Die Teiglinge locker aufarbeiten und in ein Gärkörbchen legen und bei Raumtemperatur ca. 45-60 min. Garen.</li>
+                        <li>Jetzt die Brote mit dem Schluss nach oben in den Ofen bei 250°C schieben und gut dampfen. Nach ca. 10 min den Ofen auf 180°C zurückdrehen.</li>
                     </ol>
                 </div>
             </div>
