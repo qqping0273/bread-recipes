@@ -112,7 +112,45 @@ header p {
 .recipe-detail {
     padding: 40px 0;
 }
+/* --- 食譜細節頁面樣式 --- */
+.recipe-detail {
+    padding: 40px 0;
+}
 
+/* 確保食譜內容區塊 (info-box, ingredients, instructions) 靠左對齊 */
+.recipe-detail .container {
+    text-align: left !important; /* 強制所有 recipe-detail 內的元素靠左 */
+}
+
+/* 將 info-box 設置為區塊顯示，以便在 text-align: left 的環境下表現正常 */
+.info-box {
+    background-color: var(--color-secondary);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    display: block; /* 確保 info-box 佔滿寬度 */
+    text-align: left; /* 確保內容靠左 */
+}
+
+/* 確保大標題 (h1) 仍然是靠左的邊界 */
+.recipe-detail h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 10px;
+    text-align: left; /* 確保主標題靠左 */
+}
+
+/* 確保 h3 標題靠左 */
+.ingredients h3, .instructions h3 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: left; /* 強制這兩個標題靠左 */
+}
 .recipe-detail h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
