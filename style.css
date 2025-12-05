@@ -85,7 +85,7 @@ header p {
     font-size: 1.4em;
 }
 
-.card-title a {
+.recipe-card a {
     text-decoration: none;
     color: var(--color-primary);
 }
@@ -94,6 +94,14 @@ header p {
     margin: 0;
     font-size: 0.95em;
 }
+
+/* --- 確保食譜列表標題置中 (新增部分) --- */
+.container h2 {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
 
 /* --- 食譜細節頁面樣式 --- */
 .recipe-detail {
