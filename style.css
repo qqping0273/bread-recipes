@@ -5,10 +5,10 @@
 
 /* --- 顏色變數 --- */
 :root {
-    --color-primary: #4A6572; /* 沉穩藍灰 */
-    --color-secondary: #C1D0D5; /* 淺灰藍 */
-    --color-text: #2C3E50;
-    --color-background: #F0F4F7;
+    --color-primary: #6F4E37; /* 濃郁可可色：用於標題和重點元素 */
+    --color-secondary: #E8DBC5; /* 淺奶油色：用於背景區塊，柔和且溫暖 */
+    --color-text: #444444; /* 深灰色：比黑色更柔和，確保閱讀性 */
+    --color-background: #FBF9F7; /* 接近白色的微暖底色 */
     --color-light: #FFFFFF;
 }
 
@@ -65,13 +65,13 @@ h2 {
     border: 1px solid #E0E0E0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* 調整陰影，讓卡片更有深度 */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .recipe-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Hover時陰影加重 */
 }
 
 .recipe-card img {
