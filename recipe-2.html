@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>2. Kleiner Grieche (希臘式/義大利式小麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>2. Kleiner Grieche (希臘式/義大利式小麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-2.jpg" alt="希臘式/義大利式小麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款地中海風味的麵包，使用了三種酵頭：魯邦種 (Sauerteig)、熟煮穀物 (Kochstück) 和 波蘭種 (Poolish)。它富含卡拉馬塔橄欖 (Kalamata Oliven) 和費塔乳酪 (Feta)，充滿義式香草（奧勒岡）的濃郁香氣，非常適合搭配沙拉或湯品。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 120 分鐘 (不含酵頭製作時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭總計超過 14 小時</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 55-60 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 180°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,70 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>酸種 (Sauerteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1500 克 斯佩爾特小麥麵粉 630 型</li>
+                        <li>150 克 酸種酵種 (Anstellgut)</li>
+                        <li>1500 毫升 溫水 (約 35°C)</li>
                     </ul>
                     
+                    <h4>熟煮穀物 (Kochstück)</h4>
+                    <ul>
+                        <li>500 克 斯佩爾特全麥碎，細磨</li>
+                        <li>1500 毫升 沸水</li>
+                    </ul>
+
+                    <h4>波蘭種 (Poolish)</h4>
+                    <ul>
+                        <li>1500 克 斯佩爾特小麥麵粉 630 型</li>
+                        <li>40 克 奧勒岡 (Oregano)</li>
+                        <li>15 克 酵母</li>
+                        <li>1500 毫升 水</li>
+                    </ul>
+
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>6500 克 斯佩爾特小麥麵粉 630 型</li>
+                        <li>250 克 鹽</li>
+                        <li>40 克 酵母</li>
+                        <li>800 克 卡拉馬塔橄欖 (Kalamata Oliven)</li>
+                        <li>800 克 費塔乳酪 (Feta)，切丁</li>
+                        <li>3200 毫升 水</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Sauerteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1500 g Dinkelmehl 630</li>
+                        <li>150 g Anstellgut</li>
+                        <li>1500 ml warmes Wasser</li>
+                    </ul>
+
+                    <h4>Kochstück</h4>
+                    <ul>
+                        <li>500 g Dinkelvollkornschrot, fein</li>
+                        <li>1500 ml kochendes Wasser</li>
+                    </ul>
+
+                    <h4>Poolish</h4>
+                    <ul>
+                        <li>1500 g Dinkelmehl 630</li>
+                        <li>40 g Oregano</li>
+                        <li>15 g Hefe</li>
+                        <li>1500 ml Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>6500 g Dinkelmehl 630</li>
+                        <li>250 g Salz</li>
+                        <li>40 g Hefe</li>
+                        <li>800 g Kalamata Oliven</li>
+                        <li>800 g Feta, gewürfelt</li>
+                        <li>3200 ml Wasser</li>
                     </ul>
                 </div>
             </div>
@@ -189,25 +246,4 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
-                    </ol>
-                </div>
-
-                <div class="language-column de">
-                    <h4>德文原文 (German)</h4>
-                    <ol>
-                        <li>[Schritt 1]</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Wildbakers 德式 Brote 食譜圖鑑</p>
-        </div>
-    </footer>
-</body>
-</html>
+                        <li>酸種製作：將所有材料和 1500 毫升水倒入碗中混合均勻。水溫應約為 35°C。將酸
