@@ -156,7 +156,13 @@ header p {
 .ingredients ul li, .instructions ol li {
     margin-bottom: 10px;
 }
+/* 移除列表 ul 預設的項目符號 (點點) */
+.ingredients ul {
+    list-style-type: none; /* 移除點點 */
+    padding-left: 0; /* 移除預設的左側間距，讓項目靠左對齊 */
+}
 
+/* 如果您希望步驟 (ol) 的編號仍然保留，則不需要動 ol 的樣式。 */
 /* --- 頁腳 (Footer) 樣式 --- */
 footer {
     background-color: var(--color-primary);
