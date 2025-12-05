@@ -243,7 +243,12 @@ footer p {
         padding-bottom: 20px;
         border-bottom: 1px solid var(--color-secondary);
     }
-    
+    /* 為德文欄位添加淺色背景和邊框，與中文欄位區分 */
+.language-column.de {
+    background-color: var(--color-secondary); 
+    padding: 15px; /* 增加內邊距，讓內容不緊貼邊框 */
+    border-radius: 5px; /* 輕微圓角 */
+}
     /* 避免最後一個欄位有底線 */
     .language-container .language-column:last-child {
         border-bottom: none;
