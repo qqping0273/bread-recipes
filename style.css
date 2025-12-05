@@ -6,7 +6,44 @@
     --color-background: #FBF9F7; /* 接近白色的微暖底色 */
     --color-light: #FFFFFF;
 }
+/* --- 食譜細節頁面樣式：圖片修正 --- */
+.recipe-detail-wrapper .recipe-image {
+    text-align: center; /* 確保圖片容器置中 */
+    margin-bottom: 30px; /* 增加圖片與文字的間距 */
+}
 
+.recipe-detail-wrapper .recipe-image img {
+    /* 這段是關鍵，確保圖片撐滿容器 */
+    max-width: 100%; 
+    height: auto;
+    width: 100%; /* 強制圖片寬度為 100% */
+    
+    object-fit: cover;
+    height: 400px; /* 設定統一高度 */
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 沿用 detail-image 的陰影 */
+}
+
+/* 確保 back-link 容器內的內容置中 (已在 HTML 中修復，但 CSS 保持清晰) */
+.back-link {
+    margin-bottom: 20px;
+    text-align: center !important;
+}
+
+/* --- 時間參數色塊樣式 --- */
+.timing-info.recipe-summary {
+    background-color: var(--color-secondary); /* 淺奶油色背景 */
+    border-left: 5px solid var(--color-primary); /* 側邊的棕色強調線 */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.timing-info.recipe-summary h4 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
 /* --- 全域設定 (包含圓潤字體和優化行高) --- */
 body {
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif; /* 圓潤字體堆疊 */
