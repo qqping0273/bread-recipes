@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>5. Chili Cheese Karree (辣椒芝士麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>5. Chili Cheese Karree (辣椒芝士麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-5.jpg" alt="辣椒芝士麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這款麵包採用波蘭種 (Poolish) 製作，結合了杜蘭小麥粗粒粉 (Semola)，使麵包具有獨特的結構。內餡為豪達芝士丁 (Goudakäse) 和油漬辣椒，口感濃郁、微辣且充滿芝士鹹香。成品切割方式使其形狀獨特（Karree 為方塊之意）。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 25 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭及主麵團總計超過 12 小時</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 35-40 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 200°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,44 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>波蘭種 (Poolish)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>3300 克 小麥麵粉 550 型</li>
+                        <li>30 克 酵母</li>
+                        <li>3300 毫升 水</li>
                     </ul>
-                    
+
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>4700 克 小麥麵粉 550 型</li>
+                        <li>2000 克 杜蘭小麥粗粒粉 (Semola)</li>
+                        <li>240 克 鹽</li>
+                        <li>20 克 酵母</li>
+                        <li>1000 克 油漬辣椒 (Chili Paprika in Öl)</li>
+                        <li>3700 毫升 水</li>
+                        <li>1500 克 豪達芝士 (Goudakäse)，切丁</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Poolish</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>3300 g Weizenmehl 550</li>
+                        <li>30 g Hefe</li>
+                        <li>3300 g Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>4700 g Weizenmehl 550</li>
+                        <li>2000 g Semola</li>
+                        <li>240 g Salz</li>
+                        <li>20 g Hefe</li>
+                        <li>1000 g Chili Paprika in Öl</li>
+                        <li>3700 g Wasser</li>
+                        <li>1500 g Goudakäse in Würfel</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +220,23 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>波蘭種製作：將所有波蘭種材料與水攪拌均勻，然後在廚房（室溫）靜置過夜。</li>
+                        <li>主麵團攪拌：將除了鹽和芝士以外的所有主麵團材料放入攪拌機。慢速攪拌 4 分鐘，再快速揉麵 8 分鐘。現在加入鹽，再慢速攪拌 1 分鐘，快速揉麵 2-3 分鐘。麵團應能拉出薄膜，如果不行則繼續揉麵。麵團揉好後，將芝士丁短暫拌入麵團中。理想的麵團溫度為 24°C。</li>
+                        <li>第一次靜置：將揉好的麵團靜置至少 2 小時。</li>
+                        <li>分割與滾圓：輕柔地將麵團分割成 600 克一塊。接著輕輕地滾圓，收口朝下放在桌面上靜置。</li>
+                        <li>整形與割紋：靜置 30 分鐘後，在麵團塊上撒上少許麵粉，然後將收口朝上翻面。現在用金屬刮刀在頂部劃出一個「X」字割紋，並將割紋的四個尖角向外翻開。</li>
+                        <li>最後發酵與烘烤：將麵團塊放在鋪有烘焙紙的烤盤上進行最後發酵。將烤盤推入預熱至 240°C 的烤箱中，並充分加蒸汽。約 10 分鐘後，將烤箱溫度降至 200°C。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Die Zutaten mit dem Wasser verrühren und einen Poolish herstellen und über Nacht in der Küche stehen lassen.</li>
+                        <li>Für den Hauptteig alle Zutaten bis auf das Salz und den Käse in die Maschine geben. 4 min. auf langsamer Stufe mischen und 8 min. auf schneller Stufe kneten. Jetzt das Salz zugeben und nochmal 1 min. langsam und 2-3 min. schnell kneten. Der Teig sollte sich gut Fenstern lassen, wenn das nicht der Fall ist noch etwas weiter kneten. Wenn der Teig fertig, die Käsewürfel kurz unterkneten. Ideale Teigtemperatur wäre 24°C. Den fertigen Teig mindesten 2 Std. ruhen lassen.</li>
+                        <li>Dann 600g Teigstücke vorsichtig abstechen. Anschließend locker rundwirken und den mit dem Schluss nach unten auf dem Tisch ruhen lassen.</li>
+                        <li>Nach 30 min. die Teigstück mit etwas Mehl bestreuen und mit dem Schluss nach oben drehen. Jetzt mit einer Metallscharre ein X einstrechen und die 4 Spitzen nach außen klappen.</li>
+                        <li>Auf Backbleche mit Backpapier setzen und zur Gare stellen. Bei 240°C in den Ofen schieben und gut dampfen. Nach ca. 10 min den Ofen auf 200°C zurückdrehen.</li>
                     </ol>
                 </div>
             </div>
