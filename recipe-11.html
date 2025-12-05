@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>11. Gersterbrot (炙烤黑麥麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,17 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>11. Gersterbrot (炙烤黑麥麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-11.jpg" alt="炙烤黑麥麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> Gersterbrot 是一款德國黑麥混合麵包，其名稱源於烘烤前用火焰噴槍對麵包表皮進行短暫「炙烤」的傳統工藝，能產生獨特的煙燻香氣和深色外觀。食譜使用了黑麥酸種和熟煮麵包屑（Aromastück），極大地提升了麵包的濕潤度和豐富風味。</p>
+            <p><strong>製作份量 (Menge):</strong> 2 個 600 克麵包。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 約 20 分鐘 (不含預發酵時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 總計超過 13 小時 (包含酵頭及麵團發酵)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 50-55 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 180°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +171,52 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>酸種 (Sauerteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>3000 克 黑麥粉 1150 型 (Roggenmehl 1150)</li>
+                        <li>150 克 酸種酵種 (Anstellgut)</li>
+                        <li>2400 毫升 水 (約 30°C)</li>
+                    </ul>
+
+                    <h4>熟煮香氣塊 (Aromastück)</h4>
+                    <ul>
+                        <li>2000 克 麵包屑 (Semmelbrösel)</li>
+                        <li>4000 毫升 水</li>
                     </ul>
                     
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>3000 克 小麥麵粉 1050 型 (Weizenmehl 1050)</li>
+                        <li>4000 克 黑麥粉 1150 型 (Roggenmehl 1150)</li>
+                        <li>240 克 鹽</li>
+                        <li>150 克 酵母 (Hefe)</li>
+                        <li>1800 毫升 水</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Sauerteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>3000 g Roggenmehl 1150</li>
+                        <li>150 g Anstellgut</li>
+                        <li>2400 g Wasser (ca. 30°C)</li>
+                    </ul>
+
+                    <h4>Aromastück</h4>
+                    <ul>
+                        <li>2000 g Semmelbrösel</li>
+                        <li>4000 g Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>3000 g Weizenmehl 1050</li>
+                        <li>4000 g Roggenmehl 1150</li>
+                        <li>240 g Salz</li>
+                        <li>150 g Hefe</li>
+                        <li>1800 g Wasser</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +229,26 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>酸種製作：將酸種所有材料充分混合均勻，發酵約 12-16 小時。理想麵團溫度應約為 28°C。</li>
+                        <li>熟煮香氣塊製作：將水倒在麵包屑上並混合。浸泡膨脹至少 1 小時。</li>
+                        <li>主麵團攪拌：將所有主麵團材料（包含酸種和熟煮香氣塊）放入攪拌機。慢速混合 6-8 分鐘，快速揉麵 3 分鐘。理想麵團溫度應約為 26°C。將揉好的麵團在輕塗油的容器中靜置約 30 分鐘。</li>
+                        <li>整形與入模：靜置結束後，使用少量麵粉，將麵團從容器中取出，溫和地滾圓並擀成長條形。收口朝下放入塗有油脂的長形烤模中。</li>
+                        <li>最後發酵：麵包應在室溫下發酵約 60 分鐘，體積應膨脹至兩倍大小，即為可以烘烤的狀態。</li>
+                        <li>預處理：烘烤前，在麵包表面塗上一層由酸種和水混合而成的麵糊 (Schlemme)，並讓其稍微變乾。接著，用火焰噴槍對麵包進行**炙烤 (Gerstern/abflämmen)**。</li>
+                        <li>烘烤：將麵包推入預熱至 240°C 的上下火烤箱中，並充分加蒸汽。烘烤約 5 分鐘後，將烤箱溫度降至 180°C。烘烤總時長為 50-55 分鐘。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Die Zutaten für den Sauerteig gut miteinander vermischen und ca. 12-16 Std. reifen lassen. Die Teigtemperatur sollte ca. 28°C haben.</li>
+                        <li>Für das Aromastück die Semmelbrösel mit dem Wasser übergießen und vermischen. Mindestens 1 Std. quellen lassen.</li>
+                        <li>Für den Hauptteig alle Zutaten (einschließlich Sauerteig und Aromastück) in die Maschine geben. 6-8 Min. auf langsamer Stufe mischen und 3 Min. im Schnellgang kneten. Ideale Teigtemperatur wäre 26°C. Den fertigen Teig ca. 30 min. in einer leicht geölten Wanne/Schüssel ruhen lassen.</li>
+                        <li>Nach der Teigruhe mit wenig Mehl den Teig aus der Schüssel holen, schonend rund wirken und lang rollen. Mit dem Schluss nach unten in eine gefettete Kastenbackform.</li>
+                        <li>Nach ca. 60 min. sollte das Brot die doppelte Größe haben und ist somit backbereit.</li>
+                        <li>Vor dem Backen die Brote mit einer Schlemme aus Sauerteig und Wasser bestreichen und kurz anziehen lassen. Jetzt die Brote mit einem Bunsenbrenner **Gerstern (abflämmen)**.</li>
+                        <li>Die Brote in den vorgeheizten Ofen bei 240°C Ober-/Unterhitze schieben und gut bedampfen. Nach ca. 5 min den Ofen auf 180°C zurückdrehen. Backzeit: 50-55 min.</li>
                     </ol>
                 </div>
             </div>
