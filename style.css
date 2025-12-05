@@ -327,4 +327,10 @@ footer p {
     padding-top: 20px;
     margin-bottom: 30px;
 }
+    /* --- 最終排版修正：確保食譜頁面內文靠左 (不會影響置中的標題和按鈕) --- */
+
+.recipe-detail {
+    /* 強制所有食譜細節頁面中的內文（簡介、材料、步驟）靠左對齊 */
+    text-align: left !important; 
+}
 }
