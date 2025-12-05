@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>9. Schoko Kiste (巧克力盒子麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>9. Schoko Kiste (巧克力盒子麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-9.jpg" alt="巧克力盒子麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款極為豐富的甜點麵包，使用了加入可可粉的酸種 (Schokosauerteig) 作為風味基礎，再添加了大量的葡萄乾、核桃、榛果，以及最後拌入的巧克力塊。麵團揉製完成後放入烤模中烘烤 (Kiste)，確保了厚實的體積和濕潤的內部。其獨特的巧克力酸種賦予了麵包複雜的香氣。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 30 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭及麵團總計超過 18 小時 (包含隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 35 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 200°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,62 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>浸泡果乾堅果 (Quellstück)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1000 克 葡萄乾 (Rosinen)</li>
+                        <li>1000 克 核桃 (Walnüsse)</li>
+                        <li>500 克 榛果 (Haselnüsse)</li>
+                        <li>1000 毫升 水</li>
+                    </ul>
+
+                    <h4>巧克力酸種 (Schokosauerteig)</h4>
+                    <ul>
+                        <li>3000 克 小麥麵粉 550 型</li>
+                        <li>300 克 酸種酵種 (Anstellgut)</li>
+                        <li>300 克 可可粉 (Kakaopulver)</li>
+                        <li>3300 毫升 水 (約 35°C)</li>
                     </ul>
                     
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>5000 克 小麥麵粉 550 型</li>
+                        <li>1000 克 小麥麵粉 1050 型</li>
+                        <li>1000 克 鄉村麵粉 (Ruchmehl)</li>
+                        <li>4500 毫升 水</li>
+                        <li>210 克 鹽</li>
+                        <li>280 克 酵母</li>
+                        <li>1000 克 巧克力塊 (Schokochunks)</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Quellstück</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1000 g Rosinen</li>
+                        <li>1000 g Walnüsse</li>
+                        <li>500 g Haselnüsse</li>
+                        <li>1000 g Wasser</li>
+                    </ul>
+
+                    <h4>Schokosauerteig</h4>
+                    <ul>
+                        <li>3000 g Weizenmehl Type 550</li>
+                        <li>300 g Anstellgut</li>
+                        <li>300 g Kakaopulver</li>
+                        <li>3300 g Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>5000 g Weizenmehl Type 550</li>
+                        <li>1000 g Weizenmehl Type 1050</li>
+                        <li>1000 g Ruchmehl</li>
+                        <li>4500 g Wasser</li>
+                        <li>210 g Salz</li>
+                        <li>280 g Hefe</li>
+                        <li>1000 g Schokochunks</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +238,24 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>浸泡果乾堅果準備：將所有浸泡果乾堅果浸泡在水中，使其被覆蓋。</li>
+                        <li>巧克力酸種製作：將麵粉、酵種、可可粉與水混合均勻。水溫應約為 35°C。將酸種蓋上蓋子，在溫暖處發酵至少 12-16 小時。</li>
+                        <li>主麵團攪拌：將除了鹽和巧克力塊以外的所有主麵團材料放入攪拌機。慢速攪拌 4 分鐘，快速揉麵 10-12 分鐘。麵團應能拉出薄膜，如果不行則繼續揉麵。最後，短暫拌入巧克力塊。理想麵團溫度為 25°C。</li>
+                        <li>第一次靜置：將揉好的麵團蓋上蓋子，靜置至少 60 分鐘。</li>
+                        <li>整形與冷藏：將麵團稱重分塊，輕輕折疊成形，放入烤模中。在室溫下發酵約一小時。之後放入冰箱冷藏過夜。</li>
+                        <li>回溫與烘烤：隔天，將麵團從冰箱取出，在室溫下回溫約 30 分鐘。將烤模推入 240°C 烤箱，直接將溫度降至 200°C。烘烤約 35 分鐘。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Das Quellstück in Wasser einweichen, so dass diese bedeckt sind.</li>
+                        <li>Für den Sauerteig Mehl, Anstellgut, Kakaopulver mit Wasser vermischen. Das Wasser sollte ca. 35°C warm sein. Den Sauerteig abdecken und an einem warmen Ort mindestens 12-16 Std. reifen lassen.</li>
+                        <li>Für den Hauptteig alle Zutaten bis auf die Schokochunks in die Maschine geben 4 min. auf langsamer Stufe mischen und 10-12 min. auf schneller Stufe kneten. Der Teig sollte sich gut Fenstern lassen, wenn das nicht der Fall ist, noch etwas weiter kneten. Zum Schluss die Schokochunks kurz unterlaufen lassen. Ideale Teigtemperatur wäre 25°C. Den fertigen Teig mindesten 60 min. abgedeckt ruhen lassen.</li>
+                        <li>Dann den Teig abwiegen, locker zusammenlegen und in eine Backform geben.</li>
+                        <li>Den Teig bei Raumtemperatur etwa eine Stunde gehen lassen. Danach über Nacht im Kühlschrank reifen lassen.</li>
+                        <li>Am nächsten Tag den Teig aus dem Kühlschrank holen und ca.30min in Raum anspringen lassen. Bei 240°C in den Backofen geben und direkt auf 200°C zurückschalten. Für etwa 35 min backen.</li>
                     </ol>
                 </div>
             </div>
