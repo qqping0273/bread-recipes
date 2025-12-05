@@ -187,3 +187,41 @@ footer {
         font-size: 2.5em;
     }
 }
+/* --- 雙語內容排版樣式 --- */
+.language-container {
+    display: flex; /* 啟用 Flexbox 佈局 */
+    gap: 30px; /* 兩個語言欄位之間的間距 */
+    margin-top: 30px;
+}
+
+.language-column {
+    flex: 1; /* 每個欄位佔據相等寬度 */
+    min-width: 0; /* 確保內容不會溢出 */
+}
+
+/* 確保小螢幕上 (手機) 自動變成上下堆疊 */
+@media (max-width: 768px) {
+    .language-container {
+        flex-direction: column; /* 小螢幕時改為垂直堆疊 */
+        gap: 0;
+    }
+}
+
+/* 特別樣式：讓德文區塊背景稍有區別 */
+.language-column.de {
+    background-color: var(--color-background); /* 德文區塊使用微暖背景色 */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 步驟清單內的調整 */
+.language-column ol li {
+    margin-bottom: 25px;
+}
+
+.language-column h4 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
