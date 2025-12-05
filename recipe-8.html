@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>8. Pane Viamala (維亚马拉麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>8. Pane Viamala (維亚马拉麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-8.jpg" alt="維亚马拉麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這款麵包以其獨特的扭轉外型和烤麵粉帶來的堅果風味而聞名。它採用了大量的小麥麵粉，並透過長時間的冷藏發酵和水解法 (Autolyse) 處理，使麵團柔軟且富有彈性。麵包成形後進行扭轉 (verzwirbeln)，是其主要特色。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 20 分鐘 (不含烘烤麵粉時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 總計超過 14 小時 (包含水解及隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 35-40 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 210°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,34 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>主麵團 (Hauptteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1000 克 小麥全麥粉</li>
+                        <li>2000 克 小麥麵粉 1050 型，**烘烤過**</li>
+                        <li>6000 克 小麥麵粉 550 型</li>
+                        <li>1000 克 杜蘭小麥粗粒粉 (Hartweizengrieß)</li>
+                        <li>300 克 大麥麥芽 (Gerstenmalz)</li>
+                        <li>100 克 酵母</li>
+                        <li>240 克 鹽</li>
+                        <li>7000 毫升 水 (第一次加入，水解用)</li>
+                        <li>1500 毫升 水 (第二次加入，調整用)</li>
                     </ul>
-                    
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Hauptteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1000 g Weizenvollkornmehl</li>
+                        <li>2000 g Weizenmehl Type 1050, geröstet</li>
+                        <li>6000 g Weizenmehl Type 550</li>
+                        <li>1000 g Hartweizengrieß</li>
+                        <li>300 g Gerstenmalz</li>
+                        <li>100 g Hefe</li>
+                        <li>240 g Salz</li>
+                        <li>7000 g Wasser</li>
+                        <li>1500 g Wasser</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +210,25 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>烤麵粉準備：將 1050 型小麥麵粉分開烘烤，直到呈現淺棕色。</li>
+                        <li>水解 (Autolyse)：將小麥全麥粉、烤過的 1050 型麵粉、550 型麵粉和杜蘭小麥粗粒粉，與 7000 毫升水進行水解。這意味著所有提及的材料只簡單混合至結合，然後在麵團碗中浸泡膨脹 1 小時。</li>
+                        <li>主麵團攪拌：隨後加入剩餘的材料（大麥麥芽、酵母、鹽），揉成一個柔軟但富有可塑性的麵團。先慢速揉約 6 分鐘，再快速揉約 6 分鐘。最後，將剩餘的 1500 毫升水分批逐漸加入，直到麵團完全揉好。</li>
+                        <li>冷藏：將揉好的麵團放入塗油的碗中，在冰箱中冷藏過夜。</li>
+                        <li>回溫與分割：第二天，將麵團從冰箱取出，在室溫下回溫約 1 小時。之後將麵團倒在撒有充足麵粉的工作臺上，小心地將麵團切割成 500 克一塊的長條形。</li>
+                        <li>整形扭轉：抓住麵團塊的兩端，朝相反的方向扭轉 (verzwirbeln)。</li>
+                        <li>最後發酵與烘烤：將麵團在室溫下再發酵 1 小時。然後在 240°C 下直接放在烤石上烘烤。若想保險起見，也可以將麵包放在烘焙紙上，然後滑到烤石上。烘烤約 10 分鐘後，將溫度降至 210°C，再烤約 25-30 分鐘直到完成。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Das 1050 Weizenmehl getrennt voneinander rösten, bis eine hellbraune Farbe entsteht.</li>
+                        <li>Aus dem Weizenvollkornmehl, dem gerösteten Weizenmehl, Weizenmehl 550, Hartweizengrieß mit 7000 g Wasser eine Autolyse machen. Das heißt alle genannten Zutaten nur kurz vermischen bis diese gebunden sind und für 1 Stunde in der Teigschüssel quellen lassen.</li>
+                        <li>Anschließend die restlichen Zutaten beigeben und daraus einen weichen aber plastischen Teig kneten ca. 6 min langsam und 6 min schnell. Zum Schluss das restliche Wasser nach und nach beigeben, bis der Teig komplett ausgeknetet ist.</li>
+                        <li>Diesen in eine geölte Schüssel geben und über Nacht im Kühlschrank lagern.</li>
+                        <li>Am Folgetag den Teig aus dem Kühlschrank holen und bei Raumtemperatur für ca. 1 Stunde temperieren lassen. Danach den Teig auf eine gut bemehlte Arbeitsfläche stürzen und vorsichtig 500g Stücke länglich abwiegen. Dann den Teig an beiden Enden packen und in die jeweilig Gegengesetzte Richtung verzwirbeln.</li>
+                        <li>Den Teig für eine weitere Stunde bei Raumtemperatur gehen lassen. Dann bei 240 °C direkt auf den Backstein geben. Wenn man auf Nummer sichergehen möchte, kann man das Brot auch auf ein Backpapier setzten und es dann auf den Stein rutschen lassen. Nach ca. 10 min. Backzeit die Temperatur auf 210°C fallen lassen und für etwa 25-30 min. fertig backen.</li>
                     </ol>
                 </div>
             </div>
