@@ -1,179 +1,343 @@
-/* --- 顏色變數 --- */
-:root {
-    --color-primary: #6F4E37; 
-    --color-secondary: #E8DBC5; 
-    --color-text: #444444; 
-    --color-background: #FBF9F7; 
-    --color-light: #FFFFFF;
-}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Wildbakers 德式 Brote 食譜圖鑑</title>
+    <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
-/* --- 全域設定 --- */
-body {
-    font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif;
-    line-height: 1.7;
-    font-size: 16.5px;
-    color: var(--color-text);
-    background-color: var(--color-background); 
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        /* --- 顏色變數 --- */
+        :root {
+            --color-primary: #6F4E37; /* 濃郁可可色 */
+            --color-secondary: #E8DBC5; /* 淺奶油色 */
+            --color-text: #444444; /* 深灰色 */
+            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-light: #FFFFFF;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        /* --- 全域設定 --- */
+        body {
+            font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.7;
+            font-size: 16.5px;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 0;
+        }
 
-h1, h2, h3 {
-    color: var(--color-primary);
-    font-weight: 700;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* --- 頁首 (Header) 樣式 --- */
-header {
-    background-color: var(--color-primary);
-    padding: 30px 0;
-    border-bottom: 2px solid var(--color-secondary);
-    text-align: center;
-    color: var(--color-light);
-}
+        h1, h2, h3 {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
 
-header h1, header p {
-    color: var(--color-light) !important;
-}
+        /* --- 頁首 (Header) 樣式 --- */
+        header {
+            background-color: var(--color-primary);
+            padding: 30px 0;
+            border-bottom: 2px solid var(--color-secondary);
+            text-align: center;
+            color: var(--color-light);
+        }
 
+        header h1, header p {
+            color: var(--color-light) !important;
+        }
 
-/* --- 食譜列表 (Recipe Index) 樣式 --- */
-/* 【網格佈局】 - 解決卡片垂直堆疊問題 */
-.recipe-index {
-    padding: 40px 0;
-    display: grid; /* <-- 關鍵！ */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* <-- 關鍵！ */
-    gap: 30px;
-}
+        /* --- 食譜列表 (Recipe Index) 樣式 --- */
+        /* 【關鍵】解決垂直堆疊，強制使用網格佈局 */
+        .recipe-index {
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-.recipe-card {
-    background-color: var(--color-light);
-    border: 1px solid #E0E0E0;
-    border-radius: 12px; 
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s;
-}
+        .recipe-card {
+            background-color: var(--color-light);
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
 
-.recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
 
-.recipe-card a {
-    display: block;
-    border-radius: 12px; 
-    overflow: hidden;
-    text-decoration: none;
-    color: var(--color-primary);
-}
+        .recipe-card a {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--color-primary);
+        }
 
-.recipe-card img {
-    width: 100%;
-    height: 300px; 
-    object-fit: cover;
-}
+        .recipe-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
 
-.card-content {
-    padding: 20px;
-}
+        .card-content {
+            padding: 20px;
+        }
+        
+        /* 確保首頁的食譜列表 H2 標題置中 */
+        .container h2 {
+            text-align: center !important;
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
 
-/* --- 食譜細節頁面樣式 --- */
-.recipe-detail .detail-image {
-    max-width: 100%;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto 30px auto;
-}
+        /* --- 食譜細節頁面樣式 --- */
+        .recipe-detail .detail-image {
+            max-width: 100%;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+        
+        /* 【關鍵】解決詳情頁標題靠左問題，強制置中 */
+        .recipe-detail h1 {
+            color: var(--color-primary) !important;
+            font-weight: 700;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--color-secondary);
+            padding-bottom: 10px;
+            text-align: center !important;
+        }
 
-/* info-box 樣式 */
-.info-box {
-    background-color: var(--color-secondary); 
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
+        /* 【關鍵】解決返回連結樣式與對齊問題 */
+        .back-link a {
+            color: var(--color-primary) !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            font-size: 1.1em !important;
+            display: inline-block;
+        }
 
-/* 雙語言對照樣式 (Flexbox) */
-.language-container {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 40px;
-}
+        /* 讓連結位置靠左對齊 */
+        .back-link {
+            margin-bottom: 20px;
+            text-align: left !important;
+        }
+        
+        /* info-box 樣式 */
+        .info-box {
+            background-color: var(--color-secondary); 
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        /* 雙語言對照樣式 (Flexbox) */
+        .language-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
 
-.language-column {
-    flex: 1;
-    min-width: 0;
-}
+        .language-column {
+            flex: 1;
+            min-width: 0;
+        }
 
-.language-column.de {
-    background-color: var(--color-secondary); 
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/* 【標題置中】 - 解決詳情頁標題靠左問題 */
-.recipe-detail h1 {
-    color: var(--color-primary) !important;
-    font-weight: 700;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--color-secondary);
-    padding-bottom: 10px;
-    text-align: center !important; /* <-- 關鍵！ */
-}
-
-/* 確保首頁的食譜列表 H2 標題置中 */
-.container h2 {
-    text-align: center !important;
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
-
-/* 【返回連結】 - 解決返回連結樣式與對齊問題 */
-.back-link a {
-    color: var(--color-primary) !important; 
-    text-decoration: none !important; 
-    font-weight: bold !important; 
-    font-size: 1.1em !important;
-    display: inline-block;
-}
-
-/* 讓連結位置靠左對齊 */
-.back-link {
-    margin-bottom: 20px;
-    text-align: left !important; /* <-- 關鍵！ */
-}
-
-
-/* --- 頁腳 (Footer) 樣式 --- */
-footer {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
+        .language-column.de {
+            background-color: var(--color-secondary); 
+            padding: 15px;
+            border-radius: 5px;
+        }
 
 
-/* --- RWD 手機版調整 (Media Queries) --- */
-@media (max-width: 768px) {
-    .recipe-index {
-        grid-template-columns: 1fr;
-    }
+        /* --- 頁腳 (Footer) 樣式 --- */
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
 
-    .language-container {
-        flex-direction: column;
-    }
-}
+        /* --- RWD 手機版調整 (Media Queries) --- */
+        @media (max-width: 768px) {
+            .recipe-index {
+                grid-template-columns: 1fr;
+            }
+
+            .language-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍞 2025 Wildbakers 德式 Brote</h1>
+            <p>-- 德國Brote精選食譜圖鑑 --</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>食譜列表 (Rezeptübersicht)</h2>
+
+        <div class="recipe-index">
+            
+            <div class="recipe-card">
+                <a href="recipe-1.html">
+                    <img src="images/recipe-1.jpg" alt="斯佩爾特小麥麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>1. 斯佩爾特小麥麵包</h3>
+                        </div>
+                        <p>純粹的斯佩爾特小麥酸種麵包，口感濕潤，發酵時間長。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-2.html">
+                    <img src="images/recipe-2.jpg" alt="希臘式/義大利式小麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>2. 希臘式/義大利式小麵包</h3>
+                        </div>
+                        <p>混合三種酵頭，揉入橄欖與費塔起司，風味濃郁。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-3.html">
+                    <img src="images/recipe-3.jpg" alt="紅薯佛卡夏麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>3. 紅薯佛卡夏麵包</h3>
+                        </div>
+                        <p>使用紫薯粉製作波蘭種，麵團拌入生黃地瓜小丁，口感輕盈。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-4.html">
+                    <img src="images/recipe-4.jpg" alt="南瓜麵包（奢侈款）照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>4. 南瓜麵包（奢侈款）</h3>
+                        </div>
+                        <p>加入大量南瓜泥和綜合堅果，口感豐富，是歐洲節慶時的經典麵包。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-5.html">
+                    <img src="images/recipe-5.jpg" alt="辣椒芝士麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>5. 辣椒芝士麵包</h3>
+                        </div>
+                        <p>揉入新鮮辣椒和多種起司，帶有輕微的辛辣和濃郁的奶香。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-6.html">
+                    <img src="images/recipe-6.jpg" alt="無花果核桃麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>6. 無花果核桃麵包</h3>
+                        </div>
+                        <p>搭配無花果的甜和核桃的脆，酸甜平衡，適合搭配紅酒或起司。</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="recipe-card">
+                <a href="recipe-7.html">
+                    <img src="images/recipe-7.jpg" alt="三穀物原生穀物麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>7. 三穀物原生穀物麵包</h3>
+                        </div>
+                        <p>使用三種古老原生穀物，口感紮實，富含膳食纖維，風味深沉。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-8.html">
+                    <img src="images/recipe-8.jpg" alt="維亞瑪拉麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>8. 維亞瑪拉麵包</h3>
+                        </div>
+                        <p>瑞士傳統黑麥酸種麵包，發酵時間長，帶有獨特的麥芽和酸味。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-9.html">
+                    <img src="images/recipe-9.jpg" alt="巧克力盒子麵包照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>9. 巧克力盒子麵包</h3>
+                        </div>
+                        <p>內部充滿大量巧克力豆和可可粉，口感鬆軟，是甜點麵包的首選。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-10.html">
+                    <img src="images/recipe-10.jpg" alt="大麥麵包（義大利鄉村麵包）照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>10. 大麥麵包（義大利鄉村麵包）</h3>
+                        </div>
+                        <p>使用大麥粉製作，義大利常見的鄉村風味麵包，樸實且具嚼勁。</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recipe-card">
+                <a href="recipe-11.html">
+                    <img src="images/recipe-11.jpg" alt="Gersterbrot 照片">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>11. Gersterbrot</h3>
+                        </div>
+                        <p>德國特有的傳統麵包，使用特殊 Gerste 製法，外殼濃郁酥脆。</p>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Wildbakers 德式 Brote 食譜圖鑑</p>
+        </div>
+    </footer>
+</body>
+</html>
