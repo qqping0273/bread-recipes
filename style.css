@@ -211,6 +211,10 @@ footer p {
     color: #9C7D5A; /* 稍微變淺的顏色 */
 }
 
+.back-link a:hover {
+    color: #9C7D5A; /* 稍微變淺的顏色 */
+}
+
 
 /* --- RWD 手機版調整 (Media Queries) --- */
 @media (max-width: 768px) {
