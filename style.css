@@ -1,0 +1,178 @@
+/* --- 顏色變數 --- */
+:root {
+    --color-primary: #6F4E37; /* 濃郁可可色 */
+    --color-secondary: #E8DBC5; /* 淺奶油色 */
+    --color-text: #444444; /* 深灰色 */
+    --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+    --color-light: #FFFFFF;
+}
+
+/* --- 全域設定 --- */
+body {
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.7;
+    font-size: 16.5px;
+    color: var(--color-text);
+    background-color: var(--color-background); 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* --- 頁首 (Header) 樣式 --- */
+header {
+    background-color: var(--color-primary);
+    padding: 30px 0;
+    border-bottom: 2px solid var(--color-secondary);
+    text-align: center;
+    color: var(--color-light);
+}
+
+header h1, header p {
+    color: var(--color-light) !important;
+}
+
+
+/* --- 食譜列表 (Recipe Index) 樣式 --- */
+.recipe-index {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.recipe-card {
+    background-color: var(--color-light);
+    border: 1px solid #E0E0E0;
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card a {
+    display: block;
+    border-radius: 12px; 
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* --- 食譜細節頁面樣式 --- */
+.recipe-detail .detail-image {
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+/* info-box 樣式 */
+.info-box {
+    background-color: var(--color-secondary); 
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* 雙語言對照樣式 (Flexbox) */
+.language-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.language-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.language-column.de {
+    background-color: var(--color-secondary); 
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* --- 強制置中修正 【解決標題靠左問題】 --- */
+.recipe-detail h1 {
+    color: var(--color-primary) !important;
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 10px;
+    text-align: center !important; /* 強制置中 */
+}
+
+/* 確保首頁的食譜列表 H2 標題置中 */
+.container h2 {
+    text-align: center !important;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* --- 返回連結 (Back Link) 樣式 【解決連結沒有樣式問題】 --- */
+.back-link a {
+    color: var(--color-primary) !important; 
+    text-decoration: none !important; 
+    font-weight: bold !important; 
+    font-size: 1.1em !important;
+    display: inline-block;
+}
+
+/* 讓連結位置靠左對齊 */
+.back-link {
+    margin-bottom: 20px;
+    text-align: left !important;
+}
+
+
+/* --- 頁腳 (Footer) 樣式 --- */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+/* --- RWD 手機版調整 (Media Queries) --- */
+@media (max-width: 768px) {
+    .recipe-index {
+        grid-template-columns: 1fr;
+    }
+
+    .language-container {
+        flex-direction: column;
+    }
+}
