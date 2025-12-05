@@ -14,9 +14,9 @@
 
 /* --- 全域設定 --- */
 body {
-    /* 這裡改成更現代、更友善的字體堆疊 */
-    font-family: "PingFang TC", "Microsoft YaHei", "Avenir Next", "Helvetica Neue", Arial, sans-serif; 
-    /* ... */
+    /* 使用圓潤、現代、清晰的字體堆疊 */
+    font-family: "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Avenir Next", Roboto, Arial, sans-serif;
+    /* ... 保持其他樣式不變 */
 }
 
 .container {
