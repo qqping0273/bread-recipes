@@ -6,17 +6,12 @@
     --color-background: #FBF9F7; /* 接近白色的微暖底色 */
     --color-light: #FFFFFF;
 }
-/* --- 確保食譜列表標題置中 (需確認已新增) --- */
-.container h2 {
-    text-align: center;
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
+
 /* --- 全域設定 (包含圓潤字體和優化行高) --- */
 body {
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif; /* 圓潤字體堆疊 */
     line-height: 1.7; /* 增加行高，提升閱讀舒適度 */
-    font-size: 16.5px; 
+    font-size: 16.5px;
     color: var(--color-text);
     background-color: var(--color-background);
     margin: 0;
@@ -36,18 +31,18 @@ h1, h2, h3 {
 
 /* --- 頁首 (Header) 樣式：深色底淺色字 --- */
 header {
-    background-color: var(--color-primary); 
+    background-color: var(--color-primary);
     padding: 30px 0;
     border-bottom: 2px solid var(--color-secondary);
     text-align: center;
-    color: var(--color-light); 
+    color: var(--color-light);
 }
 
 /* 確保 h1 標題也是淺色 */
 header h1 {
     margin-bottom: 5px;
     font-size: 2.5em;
-    color: var(--color-light); 
+    color: var(--color-light);
 }
 
 /* 確保副標題 (p) 也是淺色，並用 !important 覆蓋內聯樣式 */
@@ -71,13 +66,13 @@ header p {
     border: 1px solid #E0E0E0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .recipe-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .recipe-card img {
@@ -106,62 +101,11 @@ header p {
     font-size: 0.95em;
 }
 
-/* --- 確保食譜列表標題置中 (新增部分) --- */
-.container h2 {
-    text-align: center;
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
-
-
 /* --- 食譜細節頁面樣式 --- */
 .recipe-detail {
     padding: 40px 0;
-}
-/* --- 食譜細節頁面樣式 --- */
-.recipe-detail {
-    padding: 40px 0;
-}
-
-/* 確保食譜內容區塊 (info-box, ingredients, instructions) 靠左對齊 */
-.recipe-detail .container {
-    text-align: left !important; /* 強制所有 recipe-detail 內的元素靠左 */
-}
-
-/* 將 info-box 設置為區塊顯示，以便在 text-align: left 的環境下表現正常 */
-.info-box {
-    background-color: var(--color-secondary);
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    display: block; /* 確保 info-box 佔滿寬度 */
-    text-align: left; /* 確保內容靠左 */
-}
-
-/* 確保大標題 (h1) 仍然是靠左的邊界 */
-.recipe-detail h1 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--color-secondary);
-    padding-bottom: 10px;
-    text-align: left; /* 確保主標題靠左 */
-}
-
-/* 確保 h3 標題靠左 */
-.ingredients h3, .instructions h3 {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-secondary);
-    padding-bottom: 10px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: left; /* 強制這兩個標題靠左 */
-}
-.recipe-detail h1 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--color-secondary);
-    padding-bottom: 10px;
+    /* 最終修正：強制所有食譜頁面中的內文（簡介、材料、步驟）靠左對齊 */
+    text-align: left !important;
 }
 
 .detail-image {
@@ -173,24 +117,28 @@ header p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* 將 info-box 設置為區塊顯示，以便在 text-align: left 的環境下表現正常 */
 .info-box {
     background-color: var(--color-secondary);
     padding: 25px;
     border-radius: 8px;
     margin-bottom: 30px;
     line-height: 1.5;
+    display: block;
 }
 
 .info-box p {
     margin: 5px 0;
 }
 
+/* 確保 h3 標題靠左 */
 .ingredients h3, .instructions h3 {
     color: var(--color-primary);
     border-bottom: 2px solid var(--color-secondary);
     padding-bottom: 10px;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .ingredients ul, .instructions ol {
@@ -200,26 +148,11 @@ header p {
 .ingredients ul li, .instructions ol li {
     margin-bottom: 10px;
 }
+
 /* 移除列表 ul 預設的項目符號 (點點) */
 .ingredients ul {
     list-style-type: none; /* 移除點點 */
     padding-left: 0; /* 移除預設的左側間距，讓項目靠左對齊 */
-}
-
-/* 如果您希望步驟 (ol) 的編號仍然保留，則不需要動 ol 的樣式。 */
-/* --- 頁腳 (Footer) 樣式 --- */
-footer {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-    opacity: 0.9;
 }
 
 /* --- 雙語言對照樣式 (Dual Language Layout) --- */
@@ -231,7 +164,7 @@ footer p {
 
 .language-column {
     flex: 1; /* 每個欄位佔據相等寬度 */
-    min-width: 0; 
+    min-width: 0;
 }
 
 .language-column h4 {
@@ -243,9 +176,18 @@ footer p {
     margin-bottom: 15px;
 }
 
+/* 為德文欄位添加淺色背景和邊框，與中文欄位區分 */
+.language-column.de {
+    background-color: var(--color-secondary); /* 淺奶油色背景 */
+    padding: 15px; /* 內邊距 */
+    border-radius: 5px; /* 輕微圓角 */
+}
+
 /* --- 返回連結 (Back Link) 樣式 --- */
 .back-link {
     margin-bottom: 20px;
+    /* 強制 back-link 容器內的內容置中 */
+    text-align: center !important; 
 }
 
 .back-link a {
@@ -261,8 +203,39 @@ footer p {
     color: #9C7D5A; /* 稍微變淺的顏色 */
 }
 
-.back-link a:hover {
-    color: #9C7D5A; /* 稍微變淺的顏色 */
+
+/* --- 頁腳 (Footer) 樣式 --- */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* --- 強制置中修正：確保特定標題在頁面上置中 (放在最後確保優先級) --- */
+
+/* 1. 確保食譜細節頁面的主標題置中 */
+.recipe-detail h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 10px;
+    /* 強制置中標題 */
+    text-align: center !important;
+}
+
+/* 2. 確保首頁的食譜列表標題置中 */
+.container h2 {
+    text-align: center !important; /* 強制食譜列表標題置中 */
+    padding-top: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -283,56 +256,20 @@ footer p {
     .detail-image {
         height: 300px;
     }
-    
+
     .language-container {
         flex-direction: column; /* 垂直堆疊 */
         gap: 0;
     }
 
+    /* 避免手機版德文欄位底部重複線條 */
     .language-column {
         padding-bottom: 20px;
         border-bottom: 1px solid var(--color-secondary);
     }
-   /* 為德文欄位添加淺色背景和邊框，與中文欄位區分 */
-.language-column.de {
-    background-color: var(--color-secondary); /* 淺奶油色背景 */
-    padding: 15px; /* 內邊距 */
-    border-radius: 5px; /* 輕微圓角 */
-}
-    /* 避免最後一個欄位有底線 */
+    
+    /* 移除最後一個欄位的底線 */
     .language-container .language-column:last-child {
         border-bottom: none;
     }
-    /* --- 強制置中修正：確保特定標題和按鈕在頁面上置中 --- */
-
-/* 1. 確保食譜細節頁面的主標題置中 */
-.recipe-detail h1 {
-    /* 保留原來的樣式 */
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--color-secondary);
-    padding-bottom: 10px;
-    
-    /* 強制置中標題 */
-    text-align: center !important; 
-}
-
-/* 2. 確保返回連結置中 */
-.back-link {
-    margin-bottom: 20px;
-    text-align: center !important; /* 強制 back-link 容器內的內容置中 */
-}
-
-/* 3. 確保首頁的食譜列表標題置中 */
-.container h2 {
-    text-align: center !important; /* 強制食譜列表標題置中 */
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
-    /* --- 最終排版修正：確保食譜頁面內文靠左 (不會影響置中的標題和按鈕) --- */
-
-.recipe-detail {
-    /* 強制所有食譜細節頁面中的內文（簡介、材料、步驟）靠左對齊 */
-    text-align: left !important; 
-}
 }
