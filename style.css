@@ -301,4 +301,30 @@ footer p {
     .language-container .language-column:last-child {
         border-bottom: none;
     }
+    /* --- 強制置中修正：確保特定標題和按鈕在頁面上置中 --- */
+
+/* 1. 確保食譜細節頁面的主標題置中 */
+.recipe-detail h1 {
+    /* 保留原來的樣式 */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 10px;
+    
+    /* 強制置中標題 */
+    text-align: center !important; 
+}
+
+/* 2. 確保返回連結置中 */
+.back-link {
+    margin-bottom: 20px;
+    text-align: center !important; /* 強制 back-link 容器內的內容置中 */
+}
+
+/* 3. 確保首頁的食譜列表標題置中 */
+.container h2 {
+    text-align: center !important; /* 強制食譜列表標題置中 */
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
 }
