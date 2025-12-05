@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>7. 3-Korn-Urkorn (三穀物原生穀物麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>7. 3-Korn-Urkorn (三穀物原生穀物麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-7.jpg" alt="三穀物原生穀物麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款極具營養價值且高濕潤度的麵包，使用了三種原生穀物（二粒小麥、單粒小麥、斯佩爾特小麥）的全麥粉。結合熟煮穀物（Kochstück，含有多種籽類和蜂蜜）和酸種，並添加了夸克乳酪 (Quark) 和菜籽油，風味複雜且口感柔軟。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 25 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭及麵團總計超過 17 小時 (包含隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 60-65 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 240°C 降至 180°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,68 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>熟煮穀物 (Kochstück)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1000 克 二粒小麥全麥粉 (Emmer Vollkornmehl)</li>
+                        <li>500 克 亞麻籽 (Leinsaat)</li>
+                        <li>500 克 烤葵花籽 (Sonnenblumenkerne, geröstet)</li>
+                        <li>500 克 奇亞籽 (Chia)</li>
+                        <li>500 克 蜂蜜</li>
+                        <li>500 克 麵包屑 (Semmelbrösel)</li>
+                        <li>5000 毫升 沸水</li>
+                    </ul>
+
+                    <h4>酸種 (Sauerteig)</h4>
+                    <ul>
+                        <li>1000 克 斯佩爾特全麥粉 (Dinkelvollkornmehl)</li>
+                        <li>100 克 酸種酵種 (Anstellgut)</li>
+                        <li>1000 毫升 溫水 (約 40°C)</li>
                     </ul>
                     
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>3000 克 二粒小麥全麥粉 (Emmer Vollkornmehl)</li>
+                        <li>3000 克 單粒小麥全麥粉 (Einkorn-Vollkornmehl)</li>
+                        <li>2000 克 斯佩爾特全麥粉 (Dinkelvollkornmehl)</li>
+                        <li>500 克 夸克乳酪 (Quark)</li>
+                        <li>220 克 鹽</li>
+                        <li>100 克 酵母</li>
+                        <li>250 克 菜籽油 (Rapsöl)</li>
+                        <li>約 3300 毫升 冷水</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Kochstück</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1000 g Emmer Vollkornmehl</li>
+                        <li>500 g Leinsaat</li>
+                        <li>500 g Sonnenblumenkerne, geröstet</li>
+                        <li>500 g Chia</li>
+                        <li>500 g Honig</li>
+                        <li>500 g Semmelbrösel</li>
+                        <li>5000 ml Wasser, kochend</li>
+                    </ul>
+
+                    <h4>Sauerteig</h4>
+                    <ul>
+                        <li>1000 g Dinkelvollkornmehl</li>
+                        <li>100 g Anstellgut</li>
+                        <li>1000 ml warmes Wasser (ca. 40 °)</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>3000 g Emmer Vollkornmehl</li>
+                        <li>3000 g Einkorn-Vollkornmehl</li>
+                        <li>2000 g Dinkelvollkornmehl</li>
+                        <li>500 g Quark</li>
+                        <li>220 g Salz</li>
+                        <li>100 g Hefe</li>
+                        <li>250 g Rapsöl</li>
+                        <li>Ca. 3300 ml kaltes Wasser</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +244,26 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>酸種製作：將斯佩爾特全麥粉和酵種放入碗中，與溫水混合均勻。將酸種蓋上蓋子，在溫暖處發酵至少 16 小時。</li>
+                        <li>熟煮穀物製作：將所有穀物材料、蜂蜜、麵包屑與沸水攪拌均勻。讓混合物冷卻至少 2 小時，最好是隔夜冷卻。</li>
+                        <li>主麵團攪拌：將酸種、熟煮穀物、所有主麵團剩餘材料（**除了菜籽油**）和冷水倒入攪拌機。先用揉麵勾慢速攪拌約 8 分鐘，再快速揉麵約 2 分鐘。麵團應能拉出薄膜，如果不行則繼續揉麵（斯佩爾特小麥最好始終慢速揉麵）。隨後，將菜籽油短暫拌入麵團中。理想的麵團溫度為 25°C。</li>
+                        <li>第一次靜置：將麵團蓋上蓋子，在室溫下靜置至少 1 小時。</li>
+                        <li>整形與入模：靜置結束後，用微濕的手將麵團揉圓並揉成長條形。然後將麵團稍微弄濕，裹上一層斯佩爾特薄片或混合籽。收口朝下放入長形烤模中。</li>
+                        <li>最後發酵：將麵包直接放入冰箱冷藏約 16 小時。**（課程變體：** 蓋上蓋子在室溫下發酵約 90 分鐘。）</li>
+                        <li>烘烤：將麵包推入預熱至 240°C 的烤箱中，充分加蒸汽，烘烤 60-65 分鐘直到金黃。烘烤約 10 分鐘後，將烤箱溫度降至 180°C。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Für den Sauerteig Dinkelvollkornmehl und Anstellgut in eine Schüssel geben und mit dem Wasser gut vermischen. Den Sauerteig abgedeckt an einem warmen Ort mind. 16 Std. reifen lassen.</li>
+                        <li>Für das Kochstück alle Zutaten mit dem kochenden Wasser verrühren und die Mischung mind. 2 Std., am besten über Nacht, abkühlen lassen.</li>
+                        <li>Für den Hauptteig Sauerteig, Kochstück und alle übrigen Teigzutaten (außer dem Öl) mit dem Wasser in die Rührschüssel der Knetmaschine geben. Mit dem Knethaken zuerst ca.8 Min. auf langsamer Stufe mischen, dann noch ca. 2 Min. auf schneller Stufe kneten. Der Teig sollte sich gut fenstern lassen, ansonsten noch etwas weiterkneten (bei Dinkel am besten immer langsam kneten!). Im Anschluss das Ol kurz unterlaufen lassen. Ideale Teigtemperatur wäre 25°.</li>
+                        <li>Den Teig abgedeckt bei Raumtemperatur mind. 1 Std. ruhen lassen.</li>
+                        <li>Nach der Teigruhe den Teig mit leicht angefeuchteten Händen rundformen und länglich formen. Dann etwas anfeuchten, rundum in Dinkelflocken oder Saatenmischung wälzen und mit dem Schluss nach unten in die Kastenform setzen.</li>
+                        <li>Die geformten Brote direkt in den Kühlschrank für ca. 16 h. KURSVARINATE (Abgedeckt bei Raumtemperatur ca. 90 Min. ruhen lassen).</li>
+                        <li>Bei 240° das Brot in den Ofen schieben, gut dampfen und in 60-65 Min, goldbraun backen. Dabei nach ca. 10 Min. Backzeit die Ofentemperatur auf 180 ° reduzieren.</li>
                     </ol>
                 </div>
             </div>
