@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>4. Kirbis Deluxe (南瓜麵包/奢侈款) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>4. Kirbis Deluxe (南瓜麵包/奢侈款)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-4.jpg" alt="南瓜麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款極其豐富且香氣四溢的南瓜麵包，結合了黑麥酸種 (Roggen Sauerteig)、波蘭種 (Poolish) 和多種堅果穀物，特別加入了南瓜籽油和生南瓜丁，使麵包風味層次豐富、內部極為濕潤。外層裹滿多種堅果，口感奢侈。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 總計約 20 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 酵頭及主麵團總計超過 18 小時 (包含隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 50 分鐘</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 250°C 降至 180°C</p>
         </div>
 
         <section class="ingredients">
@@ -164,19 +170,74 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>酸種 (Sauerteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>500 克 黑麥麵粉 1150 型</li>
+                        <li>50 克 酸種酵種 (Anstellgut)</li>
+                        <li>500 毫升 水 (約 35°C)</li>
+                    </ul>
+
+                    <h4>波蘭種 (Poolish)</h4>
+                    <ul>
+                        <li>1500 克 小麥麵粉 1050 型</li>
+                        <li>20 克 酵母</li>
+                        <li>1700 毫升 水</li>
                     </ul>
                     
+                    <h4>浸泡穀物 (Quellstück)</h4>
+                    <ul>
+                        <li>100 克 烤過葵花籽</li>
+                        <li>100 克 芝麻</li>
+                        <li>200 克 磨碎南瓜籽</li>
+                        <li>500 克 烤南瓜籽</li>
+                        <li>800 毫升 水</li>
+                    </ul>
+
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>3000 克 小麥麵粉 550 型</li>
+                        <li>120 克 鹽</li>
+                        <li>20 克 酵母</li>
+                        <li>200 克 南瓜籽油</li>
+                        <li>850 克 栗子南瓜 (Hokaido)，切丁</li>
+                        <li>1150 毫升 水</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Sauerteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>500 g Roggenmehl 1150</li>
+                        <li>50 g Anstellgut</li>
+                        <li>500 ml Wasser</li>
+                    </ul>
+
+                    <h4>Poolish</h4>
+                    <ul>
+                        <li>1500 g Weizenmehl 1050</li>
+                        <li>20 g Hefe</li>
+                        <li>1700 ml Wasser</li>
+                    </ul>
+
+                    <h4>Quellstück</h4>
+                    <ul>
+                        <li>100 g Sonnenblumenkerne geröstet</li>
+                        <li>100 g Sesam</li>
+                        <li>200 g Kürbiskerne, gemahlen</li>
+                        <li>500 g Kürbiskerne, geröstet</li>
+                        <li>800 ml Wasser</li>
+                    </ul>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>3000 g Weizenmehl 550</li>
+                        <li>120 g Salz</li>
+                        <li>20 g Hefe</li>
+                        <li>200 g Kürbiskernöl</li>
+                        <li>850 g Hokaido, gewürfelt</li>
+                        <li>1150 ml Wasser</li>
                     </ul>
                 </div>
             </div>
@@ -189,14 +250,27 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>酸種製作：將所有酸種材料和 500 毫升水倒入碗中混合均勻。水溫應約為 35°C。將酸種蓋上蓋子，在溫暖處發酵至少 16 小時。</li>
+                        <li>波蘭種製作：將 1500 毫升水與酵母溶解，然後將麵粉與水-酵母混合物攪拌均勻。將完成的波蘭種蓋上蓋子在室溫下靜置 2 小時，直到體積增加一倍。然後放入冰箱冷藏過夜。</li>
+                        <li>浸泡穀物製作：將所有穀物材料與 800 毫升水混合。浸泡至少 2 小時，最好是提前一天製作。</li>
+                        <li>主麵團攪拌：將除了南瓜丁以外的所有主麵團材料放入攪拌機。慢速攪拌 4 分鐘，再快速揉麵 8 分鐘。麵團應當平滑；如果不是，則繼續揉麵。最後，緩慢地將南瓜丁拌入。理想的麵團溫度為 26°C。</li>
+                        <li>第一次靜置與翻麵：將完成的麵團蓋上蓋子，靜置至少 60 分鐘。之後進行一次折疊，再靜置 60 分鐘。</li>
+                        <li>整形與入籃：將麵團輕柔地滾圓，收口處用少許水沾濕，然後在混合好的堅果種子（芝麻、南瓜籽、葵花籽）中滾動。收口朝下放入輕撒麵粉的圓形麵包籃中。然後放入冰箱冷藏過夜。</li>
+                        <li>烘烤：隔天，將麵團從籃中倒出，直接放在預熱至 250°C 的烤石上，並充分製造蒸汽。約 10 分鐘後，將烤箱溫度降至 180°C。</li>
+                        <li>烘烤時間：50 分鐘。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Für den Sauerteig alle Zutaten in eine Schüssel geben und mit 500 ml Wasser gut vermischen. Das Wasser sollte ca. 35°C warm sein. Den Sauerteig abdecken und an einem warmen Ort mindestens 16 Std. reifen lassen.</li>
+                        <li>Für den Poolish 1500 ml Wasser mit der Hefe aufschlemmen und dann das Mehl mit dem Wasser-Hefe-Gemisch verrühren. Denn fertigen Poolish 2 Std. abgedeckt im Raum stehen lassen bis er sich verdoppelt hat. Dann über Nacht in den Kühlschrank stellen.</li>
+                        <li>Für das Quellstück alle Zutaten mit 1000 ml Wasser übergießen und vermischen. Mindestens 2 Std. quellen lassen, besser ist es das Quellstück am Vortag anzusetzen.</li>
+                        <li>Für den Hauptteig alle Zutaten bis auf die Hokaidowürfel, in die Maschine geben. 4 min. auf langsamer Stufe mischen und 8 min. auf schneller Stufe kneten. Der Teig sollte schön glatt sein, wenn das nicht der Fall ist noch etwas weiter kneten. Zum Schluss die Hokaidowürfel langsam unterlaufen lassen. Ideale Teigtemperatur wäre 26°C. Den fertigen Teig mindesten 60 min. abgedeckt ruhen lassen.</li>
+                        <li>Nach der Teigruhe einmal zusammenlegen und nochmal 60 min Teigruhe geben.</li>
+                        <li>Danach den Teig locker rundwirken, den Schluss mit etwas Wasser anfeuchten, in einer Saatenmischung (Sesam, Kürbiskerne und Sonnenblumenkerne) wälzen und in ein leichte bemehlte rundes Brotkörbchen setzen. Jetzt über Nacht in den Kühlschrank stellen.</li>
+                        <li>Am nächsten Tag aus dem Kühlschrank das Brot aus dem Körbchen kippen und direkt auf den Backstein in den vorgeheizten Ofen bei 250°C schieben und gut bedampfen. Nach ca. 10 min den Ofen auf 180°C zurückdrehen.</li>
                     </ol>
                 </div>
             </div>
