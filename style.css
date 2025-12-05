@@ -148,4 +148,87 @@ header p {
 footer {
     background-color: var(--color-primary);
     color: var(--color-light);
-    text
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* --- 雙語言對照樣式 (Dual Language Layout) --- */
+.language-container {
+    display: flex;
+    gap: 30px; /* 欄位間距 */
+    margin-bottom: 40px;
+}
+
+.language-column {
+    flex: 1; /* 每個欄位佔據相等寬度 */
+    min-width: 0; 
+}
+
+.language-column h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: var(--color-text);
+    border-bottom: 1px dashed var(--color-secondary);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- 返回連結 (Back Link) 樣式 --- */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block; /* 確保點擊區域 */
+    transition: color 0.2s;
+}
+
+.back-link a:hover {
+    color: #9C7D5A; /* 稍微變淺的顏色 */
+}
+
+
+/* --- RWD 手機版調整 (Media Queries) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .recipe-index {
+        grid-template-columns: 1fr; /* 手機版改為單欄 */
+    }
+
+    .detail-image {
+        height: 300px;
+    }
+    
+    .language-container {
+        flex-direction: column; /* 垂直堆疊 */
+        gap: 0;
+    }
+
+    .language-column {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+    
+    /* 避免最後一個欄位有底線 */
+    .language-container .language-column:last-child {
+        border-bottom: none;
+    }
+}
