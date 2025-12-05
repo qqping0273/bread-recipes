@@ -6,44 +6,7 @@
     --color-background: #FBF9F7; /* 接近白色的微暖底色 */
     --color-light: #FFFFFF;
 }
-/* --- 食譜細節頁面樣式：圖片修正 --- */
-.recipe-detail-wrapper .recipe-image {
-    text-align: center; /* 確保圖片容器置中 */
-    margin-bottom: 30px; /* 增加圖片與文字的間距 */
-}
 
-.recipe-detail-wrapper .recipe-image img {
-    /* 這段是關鍵，確保圖片撐滿容器 */
-    max-width: 100%; 
-    height: auto;
-    width: 100%; /* 強制圖片寬度為 100% */
-    
-    object-fit: cover;
-    height: 400px; /* 設定統一高度 */
-    border-radius: 8px; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 沿用 detail-image 的陰影 */
-}
-
-/* 確保 back-link 容器內的內容置中 (已在 HTML 中修復，但 CSS 保持清晰) */
-.back-link {
-    margin-bottom: 20px;
-    text-align: center !important;
-}
-
-/* --- 時間參數色塊樣式 --- */
-.timing-info.recipe-summary {
-    background-color: var(--color-secondary); /* 淺奶油色背景 */
-    border-left: 5px solid var(--color-primary); /* 側邊的棕色強調線 */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.timing-info.recipe-summary h4 {
-    color: var(--color-primary);
-    margin-top: 0;
-}
 /* --- 全域設定 (包含圓潤字體和優化行高) --- */
 body {
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft YaHei", Arial, sans-serif; /* 圓潤字體堆疊 */
@@ -82,15 +45,15 @@ header h1 {
     color: var(--color-light);
 }
 
-/* 確保副標題 (p) 也是淺色，並用 !important 覆蓋內聯樣式 */
+/* 確保副標題 (p) 也是淺色 */
 header p {
     font-size: 1.1em;
     margin-top: 5px;
-    color: var(--color-light) !important; /* 強制使用淺色，避免被 HTML 內聯樣式覆蓋 */
+    color: var(--color-light) !important;
     opacity: 0.9;
 }
 
-/* --- 食譜列表 (Recipe Index) 樣式 --- */
+/* --- 食譜列表 (Recipe Index) 樣式修正：圖片變為方形並有圓角 --- */
 .recipe-index {
     padding: 40px 0;
     display: grid;
@@ -101,7 +64,8 @@ header p {
 .recipe-card {
     background-color: var(--color-light);
     border: 1px solid #E0E0E0;
-    border-radius: 8px;
+    /* 增加卡片本身的圓角 */
+    border-radius: 12px; 
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -112,10 +76,22 @@ header p {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
+.recipe-card a {
+    /* 確保連結區塊也能保持圓角 */
+    display: block;
+    border-radius: 12px; 
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
 .recipe-card img {
     width: 100%;
-    height: 200px;
+    /* 關鍵修正：將高度強制設為與寬度一致，創造正方形視覺效果 */
+    height: 300px; 
     object-fit: cover;
+    /* 移除圖片本身的圓角，讓卡片容器的圓角來控制 */
+    border-radius: 0; 
 }
 
 .card-content {
@@ -128,33 +104,51 @@ header p {
     font-size: 1.4em;
 }
 
-.recipe-card a {
-    text-decoration: none;
-    color: var(--color-primary);
-}
-
 .card-content p {
     margin: 0;
     font-size: 0.95em;
 }
 
 /* --- 食譜細節頁面樣式 --- */
-.recipe-detail {
-    padding: 40px 0;
-    /* 最終修正：強制所有食譜頁面中的內文（簡介、材料、步驟）靠左對齊 */
+.recipe-detail-wrapper {
     text-align: left !important;
+    padding: 40px 0;
 }
 
-.detail-image {
-    width: 100%;
-    height: 400px;
+/* --- 食譜細節頁面樣式：圖片修正 (方形與圓角) --- */
+.recipe-detail-wrapper .recipe-image {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.recipe-detail-wrapper .recipe-image img {
+    /* 關鍵修正：將寬高設定為一致，創建正方形區域 */
+    max-width: 100%; 
+    width: 100%; 
+    height: 400px; /* 設定統一高度（方形） */
+    
     object-fit: cover;
+    /* 圖片圓角 */
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- 時間參數色塊樣式 (摘要區) --- */
+.timing-info.recipe-summary {
+    background-color: var(--color-secondary); /* 淺奶油色背景 */
+    border-left: 5px solid var(--color-primary); /* 側邊的棕色強調線 */
+    padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
 }
 
-/* 將 info-box 設置為區塊顯示，以便在 text-align: left 的環境下表現正常 */
+.timing-info.recipe-summary h4 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+/* 繼承舊的 .info-box 樣式 */
 .info-box {
     background-color: var(--color-secondary);
     padding: 25px;
@@ -168,8 +162,8 @@ header p {
     margin: 5px 0;
 }
 
-/* 確保 h3 標題靠左 */
-.ingredients h3, .instructions h3 {
+.ingredients h3, .instructions h3, 
+.ingredients-section h4, .instructions-section h4 {
     color: var(--color-primary);
     border-bottom: 2px solid var(--color-secondary);
     padding-bottom: 10px;
@@ -221,22 +215,21 @@ header p {
 }
 
 /* --- 返回連結 (Back Link) 樣式 --- */
-.back-link {
+.back-link-wrapper {
     margin-bottom: 20px;
-    /* 強制 back-link 容器內的內容置中 */
-    text-align: center !important; 
+    text-align: center;
 }
 
-.back-link a {
+.back-link {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    display: inline-block; /* 確保點擊區域 */
+    display: inline-block;
     transition: color 0.2s;
 }
 
-.back-link a:hover {
+.back-link:hover {
     color: #9C7D5A; /* 稍微變淺的顏色 */
 }
 
@@ -259,12 +252,11 @@ footer p {
 /* --- 強制置中修正：確保特定標題在頁面上置中 (放在最後確保優先級) --- */
 
 /* 1. 確保食譜細節頁面的主標題置中 */
-.recipe-detail h1 {
+.recipe-detail-wrapper .recipe-title-cn {
     font-size: 2.2em;
     margin-bottom: 20px;
     border-bottom: 3px solid var(--color-secondary);
     padding-bottom: 10px;
-    /* 強制置中標題 */
     text-align: center !important;
 }
 
@@ -290,8 +282,12 @@ footer p {
         grid-template-columns: 1fr; /* 手機版改為單欄 */
     }
 
-    .detail-image {
-        height: 300px;
+    .recipe-card img {
+        height: 250px; /* 手機版縮小一點 */
+    }
+
+    .recipe-detail-wrapper .recipe-image img {
+        height: 300px; /* 手機版縮小一點 */
     }
 
     .language-container {
