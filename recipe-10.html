@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【X】. [食譜名稱] 食譜</title>
+    <title>10. 大麥麵包 (義大利鄉村麵包) 食譜</title>
     <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f35e.png">
 
     <style>
         /* --- 顏色變數 --- */
         :root {
-            --color-primary: #6F4E37; /* 濃郁可可色 */
-            --color-secondary: #E8DBC5; /* 淺奶油色 */
-            --color-text: #444444; /* 深灰色 */
-            --color-background: #FBF9F7; /* 接近白色的微暖底色 */
+            --color-primary: #6F4E37; 
+            --color-secondary: #E8DBC5; 
+            --color-text: #444444; 
+            --color-background: #FBF9F7; 
             --color-light: #FFFFFF;
         }
 
@@ -114,6 +114,11 @@
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* *** 步驟間距修正：讓列表項目之間空一行 *** */
+        .instructions ol li {
+            margin-bottom: 1em; /* 增加底部間距 */
+        }
         
         /* --- 頁腳 (Footer) 樣式 --- */
         footer {
@@ -146,15 +151,16 @@
             <a href="index.html">← 返回食譜列表</a>
         </div>
         
-        <h1>【X】. [食譜名稱]</h1>
+        <h1>10. 大麥麵包 (義大利鄉村麵包)</h1>
         
-        <img src="images/recipe-X.jpg" alt="食譜圖片描述" class="detail-image">
+        <img src="images/recipe-10.jpg" alt="杜蘭小麥麵包照片" class="detail-image">
 
         <div class="info-box">
-            <p><strong>簡介 (Einführung):</strong> [在這裡填寫食譜簡短介紹，例如風味、特色或酵頭類型。]</p>
-            <p><strong>準備時間 (Vorbereitung):</strong> XX 分鐘</p>
-            <p><strong>發酵時間 (Reifezeit):</strong> 總計 XX 小時</p>
-            <p><strong>烘烤時間 (Backzeit):</strong> XX 分鐘</p>
+            <p><strong>簡介 (Einführung):</strong> 這是一款以杜蘭小麥粉 (Semola) 為主、結合黑麥酸種 (Roggen Sauerteig) 的高水量麵包。杜蘭小麥帶來標誌性的淡黃色和獨特的顆粒感，而高水量賦予麵包極佳的開放氣孔。麵團經過長時間冷藏發酵，以發展其複雜風味。</p>
+            <p><strong>準備時間 (Vorbereitung):</strong> 約 25 分鐘 (不含酵頭準備時間)</p>
+            <p><strong>發酵時間 (Reifezeit):</strong> 總計超過 13 小時 (包含隔夜冷藏)</p>
+            <p><strong>烘烤時間 (Backzeit):</strong> 20-25 分鐘 (不同尺寸)</p>
+            <p><strong>烘烤溫度 (Backtemperatur):</strong> 250°C (全程)</p>
         </div>
 
         <section class="ingredients">
@@ -164,21 +170,43 @@
                 <div class="language-column zh">
                     <h4>中文材料 (Chinese)</h4>
                     
-                    <h4>[酵頭名稱]</h4>
+                    <h4>黑麥酸種 (Roggen Sauerteig)</h4>
                     <ul>
-                        <li>請在此處填寫中文材料</li>
+                        <li>1000 克 黑麥粉 (Roggenmehl)</li>
+                        <li>100 克 酸種酵種 (Anstellgut)</li>
+                        <li>800 毫升 水</li>
                     </ul>
-                    
+
+                    <h4>主麵團 (Hauptteig)</h4>
+                    <ul>
+                        <li>9000 克 杜蘭小麥粗粒粉 (Semola)</li>
+                        <li>240 克 鹽</li>
+                        <li>50 克 酵母 (Hefe)</li>
+                        <li>400 克 橄欖油 (Olivenöl)</li>
+                        <li>7700 毫升 水 (分批加入)</li>
+                    </ul>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
 
-                    <h4>[Sauerteig Name]</h4>
+                    <h4>Roggen Sauerteig</h4>
                     <ul>
-                        <li>Bitte hier die deutschen Zutaten eintragen</li>
+                        <li>1000 g Roggenmehl</li>
+                        <li>100 g Anstellgut</li>
+                        <li>800 g Wasser</li>
                     </ul>
-                </div>
+
+                    <h4>Hauptteig</h4>
+                    <ul>
+                        <li>9000 g Semola (Hartweizengrieß)</li>
+                        <li>240 g Salz</li>
+                        <li>50 g Hefe</li>
+                        <li>400 g Olivenöl</li>
+                        <li>7700 g Wasser</li>
+                    </ul>
+
+                    </div>
             </div>
         </section>
 
@@ -189,14 +217,24 @@
                 <div class="language-column zh">
                     <h4>中文步驟 (Chinese)</h4>
                     <ol>
-                        <li>[步驟一]</li>
+                        <li>黑麥酸種製作：將所有酸種材料混合均勻，在室溫下靜置發酵至少 12-16 小時。</li>
+                        <li>主麵團攪拌：將酸種、杜蘭小麥粉、酵母、橄欖油和水（先加入總水量的四分之三，使用冷水）放入攪拌機。將所有材料混合（不含鹽）後，慢速揉麵 6 分鐘 (L6)，中速揉麵 4 分鐘 (M4)，直至麵團達到七分筋。</li>
+                        <li>加鹽與終揉：加入鹽巴，繼續揉麵直至麵團達到十分筋 (Ausgeknetet/Fenstertest)。之後將剩餘的水（延遲水）逐漸加入，直到麵團完全吸收。</li>
+                        <li>基礎發酵與冷藏：將麵團移至塗油的容器中，基礎發酵 1 小時。期間進行一次折疊 (Dehnen und Falten)。然後蓋上蓋子，放入冰箱冷藏隔夜。</li>
+                        <li>分割與整形：隔天，將麵團從冰箱取出，分割成 350 克 或 600 克 的麵團塊。將麵團鬆弛後，進行輕柔地整形。</li>
+                        <li>烘烤：將麵團推入預熱至 250°C 的烤箱中，並充分加蒸汽。大塊 (600g) 烘烤約 25 分鐘，小塊 (350g) 烘烤約 20 分鐘。在烘烤過程中保持 250°C 恆溫。</li>
                     </ol>
                 </div>
 
                 <div class="language-column de">
                     <h4>德文原文 (German)</h4>
                     <ol>
-                        <li>[Schritt 1]</li>
+                        <li>Für den Roggen Sauerteig: Alle Zutaten miteinander vermischen und bei Raumtemperatur abgedeckt für mindestens 12-16 Stunden reifen lassen.</li>
+                        <li>Hauptteig mischen: Den Sauerteig, Semola, Hefe, Olivenöl und Wasser (zuerst ca. 4/3 der Gesamtmenge, kalt) in die Knetmaschine geben. Alle Zutaten (außer Salz) vermischen, dann 6 Minuten auf langsamer Stufe und 4 Minuten auf mittlerer Stufe kneten, bis der Teig etwa 70% der idealen Glutenentwicklung erreicht hat.</li>
+                        <li>Salz zugeben und Endkneten: Das Salz zugeben und weiterkneten, bis der Teig vollkommen ausgeknetet ist und eine gute Fenstertestprobe zeigt. Danach das restliche Wasser (Restwasser) schrittweise zugeben, bis der Teig das gesamte Wasser aufgenommen hat.</li>
+                        <li>Stockgare und Kühlung: Den fertigen Teig in eine geölte Schüssel geben und 1 Stunde ruhen lassen. Währenddessen einmal Dehnen und Falten. Anschließend abdecken und über Nacht im Kühlschrank lagern.</li>
+                        <li>Portionieren und Formen: Am nächsten Tag den Teig aus dem Kühlschrank nehmen und in 350 g oder 600 g Stücke teilen. Die Teiglinge kurz ruhen lassen und dann vorsichtig aufarbeiten/formen.</li>
+                        <li>Backen: Die Brote bei 250 °C in den Ofen schieben und gut bedampfen. Je nach Größe (600g ca. 25 Min. / 350g ca. 20 Min.) fertig backen. Die Backtemperatur von 250 °C durchgehend beibehalten.</li>
                     </ol>
                 </div>
             </div>
